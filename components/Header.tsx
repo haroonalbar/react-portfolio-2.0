@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 
@@ -6,9 +6,7 @@ type Props = {}
 
 export default function Header({ }: Props) {
   return (
-    <header className=' sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
-
-      {/* Socaial icons */}
+    <div className=' sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto xl:items-center z-50'>
 
       < motion.div
         initial={{
@@ -31,8 +29,6 @@ export default function Header({ }: Props) {
         <SocialIcon url="https://linkidin.com/haroonislive" fgColor='gray' bgColor='transparent' />
       </motion.div>
 
-      {/* Email */}
-
       <motion.div
         initial={{
           x: 500,
@@ -53,6 +49,6 @@ export default function Header({ }: Props) {
           get in touch
         </p>
       </motion.div>
-    </header >
-  )
+    </div >
+  );
 }

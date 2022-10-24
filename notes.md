@@ -34,3 +34,31 @@ create a component <hero />
 make a hero.tsx in components and use tsrfce for auto componet code
 
 use react-simple-typewriter for the typewriter animation in hero section
+yarn add react-simple-typewriter
+to install it
+
+hero.tsx
+use the correct import for typerwriter
+read the documetaion for importing and how to use it
+
+making background circles
+make a component for it
+create circles using tailwind
+
+hero.tsx
+make the main div overflow-hidden to not show anything outside the screen in index.js and hero.tsx
+
+index.js
+div
+
+BackgroundCircles.tsx
+use framer motion
+
+hero.tsx
+set up nav buttons and stuff
+
+index.js
+new section about component
+
+about.tsx
+tsrfce

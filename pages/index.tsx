@@ -7,25 +7,28 @@ import Hero from '../components/Hero'
 
 const Home: NextPage = () => {
   return (
-    <div  >
+    //without the overfolw-scroll or overflow-hidden mobile version is looking bad
+    //z-0 to layer somethings over it later
+    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0' >
       <Head>
         <title>haroon's portfolio
         </title>
       </Head>
-      {/* Header */}
-      <Header />
+      <div>
+        <Header />
+        <section className='snap-center'>
+          <Hero />
+        </section>
 
-      {/* Hero  */}
+        {/* About */}
+        {/* Experience */}
+        {/* Skills */}
+        {/* Projects */}
+        {/* Contact me */}
+      </div>
 
-      <Hero />
-
-      {/* About */}
-      {/* Experience */}
-      {/* Skills */}
-      {/* Projects */}
-      {/* Contact me */}
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
