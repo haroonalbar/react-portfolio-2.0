@@ -62,3 +62,10 @@ new section about component
 
 about.tsx
 tsrfce
+don't know what happened but the images is not poping on about
+
+WorkExperience.tsx
+
+yarn add next-images
+worked for adding images that was not displaying first
+use relative on div and use layout='fill' and objectFit='cover' and rounded inside className in Image component

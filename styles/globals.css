@@ -6,4 +6,16 @@
   .heroButton {
     @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#2DD4BF]/40 hover:text-[#2DD4BF]/40;
   }
+  .title {
+    @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl;
+  }
+}
+/* you need to wrap the component */
+.image-wrapper {
+  box-sizing: content-box;
+}
+/* the magic happens here */
+.image-wrapper > div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
 }

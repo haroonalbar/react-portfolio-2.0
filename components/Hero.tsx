@@ -3,13 +3,13 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import BackgroudCircles from './BackgroudCircles';
 import Image from 'next/image';
 import Link from 'next/link';
-import dp from '../images/dp.jpg';
+import dp from '../public/dp.jpg';
 
 type Props = {}
 
 export default function Hero({ }: Props) {
     const [text] = useTypewriter({
-        words: ['Hi, The name is Haroon Albar', 'Guy-who-loves-coffee.tsx', '<ButLovesToCodeMore />',],
+        words: ["Yo! It's Haroon Albar", 'Guy-who-loves-coffee.tsx', '<ButLovesToCodeMore />',],
         loop: true,
         //for the animation to stay on
         delaySpeed: 2000,
@@ -21,7 +21,7 @@ export default function Hero({ }: Props) {
 
             {/* rounded full is not working inn the div */}
             <div className="relative h-32 w-32 mx-auto object-cover">
-                <Image priority src={dp} layout='fill' className='rounded-full' />
+                <Image src={dp} layout='fill' className='rounded-full' />
             </div>
 
             {/*z-20 to layer over the backgroundcircles  */}
