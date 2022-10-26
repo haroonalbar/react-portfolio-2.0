@@ -16,7 +16,7 @@ const ExperienceCard = (props: Props) => {
         snap-center bg-[#292929] p-10
         w-[300px] md:w-[400px] xl:w-[600px]
          md:hover:opacity-100 md:opacity-40
-        cursor-pointer transition-opacity duration-200 object-contain '>
+        cursor-pointer transition-opacity duration-200 overflow-hidden '>
             <motion.div
                 initial={{
                     y: -100,
@@ -53,12 +53,12 @@ const ExperienceCard = (props: Props) => {
                     </div>
                 </div>
                 <p className='uppercase py-2 text-gray-300'>started work ... - Ended...</p>
-                <ul className='list-disc space-y-1 ml-0 text-xs md:flex  md:flex-auto'>
+                <ul className='list-disc space-y-1 ml-0 text-xs'>
                     <li>points</li>
                     <li>points</li>
                     <li>points</li>
                     <li>points</li>
-                    <li></li>
+                    <li>points</li>
                 </ul>
             </div>
         </article>
