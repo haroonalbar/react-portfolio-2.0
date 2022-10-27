@@ -69,3 +69,9 @@ WorkExperience.tsx
 yarn add next-images
 worked for adding images that was not displaying first
 use relative on div and use layout='fill' and objectFit='cover' and rounded inside className in Image component
+
+do skills and projects
+
+use hero icon for icons in contact
+
+there are issues with skill and projects but we will see if we can fix it later
