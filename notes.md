@@ -75,3 +75,9 @@ do skills and projects
 use hero icon for icons in contact
 
 there are issues with skill and projects but we will see if we can fix it later
+
+after making the contactme component
+
+use react hooks from
+to get the data from the from
+yarn add react-hook-form
