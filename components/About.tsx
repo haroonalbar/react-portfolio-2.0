@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import dp2 from '../public/dp2.jpg';
 
 type Props = {}
@@ -31,10 +31,8 @@ const About = (props: Props) => {
                     duration: 1.2,
                 }}
             >
-                <div className=' relative mt-20 md:mb-0 flex-shrink-0 w-56 h-56 
-                md:rounded-lg md:w-64 md:h-96 xl:w-[400px] xl:h-[500px]'>
-                    <Image src={dp2} className=' rounded-xl' layout='fill' objectFit='cover' />
-                </div>
+                <Image src={dp2} alt='dp image' className=' rounded-xl  relative mt-20 md:mt-0 flex-shrink-0 w-56 h-56 
+                 md:w-[600px] md:h-[450px] object-cover' />
             </motion.div>
 
             <div className=' space-y-10 px-0 md:px-10'>

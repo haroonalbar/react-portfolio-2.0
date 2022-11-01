@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import BackgroudCircles from './BackgroudCircles';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import dp from '../public/dp.jpg';
 
@@ -20,9 +20,7 @@ export default function Hero({ }: Props) {
             <BackgroudCircles />
 
             {/* rounded full is not working inn the div */}
-            <div className="relative h-32 w-32 mx-auto object-cover">
-                <Image src={dp} layout='fill' className='rounded-full' />
-            </div>
+            <Image src={dp} alt='dp' className='rounded-full relative h-32 w-32 mx-auto object-cover' />
 
             {/*z-20 to layer over the backgroundcircles  */}
             <div className='z-20'>

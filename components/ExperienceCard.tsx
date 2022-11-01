@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import Image from 'next/image'
+import Image from 'next/future/image'
 import React from 'react'
 import htmlicon from '../public/tools/html.png'
 import reacticon from '../public/tools/react.png'
@@ -29,9 +29,7 @@ const ExperienceCard = (props: Props) => {
                 viewport={{ once: true, }}
                 transition={{ duration: 1.2, }}
             >
-                <div className=' relative h-32 w-32 xl:w-[150px] xl:h-[150px] object-center '>
-                    <Image src={apple} layout='fill' objectFit='cover' objectPosition='center' className='rounded-full' />
-                </div>
+                <Image src={apple} alt='apple' className='rounded-full relative h-32 w-32 xl:w-[150px] xl:h-[150px] object-center ' />
             </motion.div>
 
             <div className=' px-0 md:px-10 md:max-w-7xl'>
@@ -39,18 +37,10 @@ const ExperienceCard = (props: Props) => {
                 <p className='font-bold text-xl mt-1'>GumGum</p>
                 <div className='flex space-x-2 my-2'>
                     {/* tech used */}
-                    <div className='relative h-10 w-10 rounded-full'>
-                        <Image src={htmlicon} layout="fill" objectFit='cover' objectPosition='center' />
-                    </div>
-                    <div className=' relative h-10 w-10 rounded-full'>
-                        <Image src={cssicon} layout="fill" objectFit='cover' objectPosition='center' />
-                    </div>
-                    <div className=' relative h-10 w-10 rounded-full'>
-                        <Image src={jsicon} layout="fill" objectFit='cover' objectPosition='center' />
-                    </div>
-                    <div className=' relative h-10 w-10 rounded-full'>
-                        <Image src={reacticon} layout="fill" objectFit='cover' objectPosition='center' />
-                    </div>
+                    <Image src={htmlicon} className='relative h-10 w-10 ' alt='icons' />
+                    <Image src={cssicon} className='relative h-10 w-10 ' alt='icons' />
+                    <Image src={jsicon} className='relative h-10 w-10 ' alt='icons' />
+                    <Image src={reacticon} className='relative h-10 w-10 ' alt='icons' />
                 </div>
                 <p className='uppercase py-2 text-gray-300'>started work ... - Ended...</p>
                 <ul className='list-disc space-y-1 ml-0 text-xs'>

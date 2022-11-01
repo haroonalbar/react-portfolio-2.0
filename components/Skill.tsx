@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import Image from 'next/image'
+import Image from 'next/future/image'
 import React from 'react'
 import jsicon from '../public/tools/js.png'
 
@@ -22,11 +22,9 @@ const Skill = ({ directionLeft }: Props) => {
                 }}
                 transition={{ duration: 1 }}
                 className='relative '>
-                <div className=' relative h-16 w-16 xl:h-20 xl:w-20 border border-teal-500/50 rounded-full
-                 filter group-hover:grayscale transition duration-300 ease-in-out object-cover'>
-                    <Image src={jsicon} layout='fill' className='rounded-full' objectFit='cover' />
+                <Image src={jsicon} alt='icon' className='relative h-16 w-16 xl:h-20 xl:w-20 border border-teal-500/50 rounded-full
+                 filter group-hover:grayscale transition duration-300 ease-in-out object-cover' />
 
-                </div>
             </motion.div>
 
             <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white

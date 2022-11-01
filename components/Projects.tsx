@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import Image from 'next/image'
+import Image from 'next/future/image'
 import React from 'react'
 import netflix from '../public/icons/netflix.png'
 type Props = {}
@@ -23,10 +23,8 @@ const Projects = (props: Props) => {
                             whileInView={{ opacity: 1, y: 0, }}
                             viewport={{ once: true }}
                             className='relative'>
-                            <div className='relative h-24 w-24 md:h-36'>
-                                <Image src={netflix} layout='fill' objectFit='contain' />
+                            <Image src={netflix} alt='project' className='relative h-24 w-24 md:h-36' />
 
-                            </div>
                         </motion.div>
 
                         <div className='space-y-10 p-0 md:px-10 max-w-6xl'>

@@ -14,12 +14,3 @@
     hover:border-teal-500/40 focus:border-teal-500/40 focus:text-teal-500/40;
   }
 }
-/* you need to wrap the component */
-.image-wrapper {
-  box-sizing: content-box;
-}
-/* the magic happens here */
-.image-wrapper > div {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 5px;
-}
