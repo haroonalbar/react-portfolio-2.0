@@ -14,7 +14,11 @@ const ContactMe = (props: Props) => {
     //getting 2 handlers to set up our froms
     const { register, handleSubmit, } = useForm<Inputs>();
     //handleSubmit is from react hook froms and onSubmit is our own handler
-    const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+    const onSubmit: SubmitHandler<Inputs> = (formData) => {
+        //to redirect to send and email from the client
+        //so now when you submit it opens up a mail client 
+        window.location.href = `mailto:haroonalbarx@gmail?subject=${formData.subject}&body=Hai, my name is ${formData.name}. ${formData.message} (${formData.email})`
+    };
     return (
         <div className='h-screen flex relative flex-col md:flex-row text-center 
         md:text-left max-w-7xl justify-evenly mx-auto items-center p-10'>
@@ -39,7 +43,8 @@ const ContactMe = (props: Props) => {
                         <p className='text-lg xl:text-sm'>Kannur, Kerala, India</p>
                     </div>
                 </div>
-                <form className=' flex flex-col space-y-2 w-fit mx-auto' >
+                {/* handleSubmit from reat form and onSubmit our own */}
+                <form onSubmit={handleSubmit(onSubmit)} className=' flex flex-col space-y-2 w-fit mx-auto' >
                     {/* to connect each input field to the following field use {...register('nameofthefield')} */}
                     <div className='flex space-x-2'>
                         <input {...register('name')} placeholder='Name' className='contactInput' type="text" />
