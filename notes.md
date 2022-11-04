@@ -85,3 +85,28 @@ yarn add react-hook-form
 adding tailwind scroller
 yarn add -D tailwind-scrollbar
 also add the plugin to the tailwindconfig
+
+//note look at bhance and dribble for design ispiration
+
+make an at the footer to goto the hero section
+
+sanity
+working:
+npm install -g @sanity/cli
+
+used:
+yarn global add @sanity/cli
+npx @sanity/cli init --coupon sonny2022
+set project name: portfolio-2-react
+path name : sanity
+use default
+select blog
+
+notworking:
+sanity init --coupon sonny2022
+
+through the site got tis also
+npx -y @sanity/cli init --template get-started --project geiweo4k --dataset production --provider google
+to set up
+
+exclude the nodemodules in the sanity folder if dont want to get any error while installing dependencies

@@ -1,6 +1,7 @@
 import React from 'react'
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
+import { PhoneIcon, MapPinIcon, EnvelopeIcon, } from '@heroicons/react/24/solid'
 import { useForm, SubmitHandler } from "react-hook-form";
+
 type Props = {}
 //inputs is used to get what types of things we are expecting for input
 type Inputs = {

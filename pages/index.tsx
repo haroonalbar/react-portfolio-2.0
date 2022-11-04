@@ -8,6 +8,10 @@ import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
+import Link from "next/link";
+import Image from "next/future/image";
+import { ArrowUpCircleIcon } from '@heroicons/react/24/solid'
+
 
 const Home: NextPage = () => {
   return (
@@ -41,6 +45,13 @@ const Home: NextPage = () => {
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
+      <Link href='#hero'>
+        <footer className='sticky bottom-20 w-full cursor-pointer h-10 rounded-full'>
+          <div className="flex items-center justify-center" >
+            <ArrowUpCircleIcon className=' text-gray-500/50 hover:text-teal-500/60 h-10 w-10' />
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 };
