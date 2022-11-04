@@ -110,3 +110,13 @@ npx -y @sanity/cli init --template get-started --project geiweo4k --dataset prod
 to set up
 
 exclude the nodemodules in the sanity folder if dont want to get any error while installing dependencies
+
+schema is bacially saying what should be the shape of the database be
+transform post.js to pageInfo.js
+
+schema.js add pageInfo and remove all the unessasary to start with a clean page
+
+delete all other except pageInfo and schema in schemas
+
+copy paste pageInfo to make experience
+simillarly make project skill etc
