@@ -119,4 +119,31 @@ schema.js add pageInfo and remove all the unessasary to start with a clean page
 delete all other except pageInfo and schema in schemas
 
 copy paste pageInfo to make experience
-simillarly make project skill etc
+simillarly make project skill social
+
+and import all those in schema
+
+To Deploy sanity
+
+cd sanity
+sanity start // not working
+npx @sanity/cli start // works// if you want to work with local host and see the vision use this
+
+add all the deatils in sanity
+
+npx @sanity/cli deploy
+give a host name: react-portfolio-demo
+now you teammembers can work on it
+
+install next sanity
+cd ..
+yarn add next-sanity @portabletext/react @sanity/image-url
+
+create sanity.ts on the root folder
+create .env.example
+and .env.local //we use this one
+
+login in sanity.io to get the project ID
+
+create new api endpoint to get the socials from sanity
+pages/api/getSocials.ts

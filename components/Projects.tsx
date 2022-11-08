@@ -19,7 +19,7 @@ const Projects = (props: Props) => {
                 {projects.map((project, i) => (
                     <div className='w-screen flex-shrink-0 snap-center flex flex-col  space-y-5 items-center justify-center p-20 md:p-44 md:mx-auto h-screen '>
                         <motion.div
-                            initial={{ opacity: 0, y: -300, }}
+                            initial={{ opacity: 0, y: -100, }}
                             transition={{ duration: 1.2, }}
                             whileInView={{ opacity: 1, y: 0, }}
                             viewport={{ once: true }}

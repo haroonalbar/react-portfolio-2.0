@@ -11,9 +11,10 @@ type Props = {
 const Skill = ({ directionLeft }: Props) => {
     return (
         <div className='group relative flex cursor-pointer '>
-            <motion.div
+            {/* <motion.div
                 initial={{
-                    x: directionLeft ? -200 : 200,
+                    // x: directionLeft ? -200 : 200,
+                    x: directionLeft ? -100 : 100,
                     opacity: 0,
                 }}
                 whileInView={{
@@ -21,8 +22,19 @@ const Skill = ({ directionLeft }: Props) => {
                     x: 0,
                 }}
                 transition={{ duration: 1 }}
-                className='relative '>
-                <Image src={jsicon} alt='icon' className='relative h-16 w-16 xl:h-20 xl:w-20 border border-teal-500/50 rounded-full
+                className='relative '> */}
+            <motion.div
+                initial={{ rotate: 180, scale: 0 }}
+                whileInView={{ rotate: 0, scale: 1 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    duration: 1.2,
+                }}
+                className='relative'
+            >
+                <Image src={jsicon} alt='icon' className='relative h-16 w-16 xl:h-20 xl:w-20 border border-teal-500/50 rounded-lg
                  filter group-hover:grayscale transition duration-300 ease-in-out object-cover' />
 
             </motion.div>
@@ -33,7 +45,7 @@ const Skill = ({ directionLeft }: Props) => {
                     <p className='text-xl font-bold text-black opacity-100'>100%</p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
