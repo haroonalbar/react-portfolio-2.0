@@ -1,5 +1,6 @@
 import { createClient } from "next-sanity";
 import createImageUrlBuilder from "@sanity/image-url";
+import { CONFIG_FILES } from "next/dist/shared/lib/constants";
 
 export const config = {
   /**

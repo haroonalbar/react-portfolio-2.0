@@ -147,3 +147,28 @@ login in sanity.io to get the project ID
 
 create new api endpoint to get the socials from sanity
 pages/api/getSocials.ts
+
+create typings.d.ts to do type definitions for all the components
+we get the values from sanity vision 
+*[_type=='experience']{} //example used to fetch experience in the vision
+if you want to expand and view the reference eg. expanding technologies in project
+*[_type=='project']{
+	...,
+	technologies[]->
+}
+
+new file on pages/api copy/paste and edit edit groq for the ones using reference for expansion
+getSkills.ts
+getProjects.ts
+getPageInfo.ts
+getExperience.ts
+
+now all these api endpoints will fetch the relevent info
+to check its working eg.
+localhost:3000/api/getSocials
+
+creating utility features in frontend
+root/utils create folder
+inside create fetchSkills.ts
+cpy/paste for all other fetchs
+
