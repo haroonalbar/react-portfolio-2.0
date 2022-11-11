@@ -26,9 +26,9 @@ export default function Header({ socials }: Props) {
         transition={{
           duration: 1.5,
         }}
-        className=' flex flex-row items-center' >
+        className=' flex flex-row items-center'>
         {socials.map((social) => (
-          <SocialIcon key={social._id} url={social.url} fgColor='gray' bgColor='transparent' />
+          <SocialIcon key={social._id} url={social.url} fgColor='gray' bgColor='transparent' target='_blank' />
         ))}
       </motion.div>
       <Link href='#contact'>

@@ -149,12 +149,12 @@ create new api endpoint to get the socials from sanity
 pages/api/getSocials.ts
 
 create typings.d.ts to do type definitions for all the components
-we get the values from sanity vision 
-*[_type=='experience']{} //example used to fetch experience in the vision
+we get the values from sanity vision
+_[_type=='experience']{} //example used to fetch experience in the vision
 if you want to expand and view the reference eg. expanding technologies in project
-*[_type=='project']{
-	...,
-	technologies[]->
+_[_type=='project']{
+...,
+technologies[]->
 }
 
 new file on pages/api copy/paste and edit edit groq for the ones using reference for expansion
@@ -172,3 +172,16 @@ root/utils create folder
 inside create fetchSkills.ts
 cpy/paste for all other fetchs
 
+now deploying to vercel
+install vercel cli tools
+konsole
+npm i -g vercel
+
+in terminal vscode
+vercel build
+yy
+haroonalbar
+n
+react-portfolio-2-0
+enter
+n

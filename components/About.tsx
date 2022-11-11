@@ -44,8 +44,8 @@ const About = ({ pageInfo }: Props) => {
                     Here is a <span className='underline decoration-teal-400/50 '>little</span> background
                 </h4>
                 <p className=' text-base'>
-                    Hey, I'm <span className='text-teal-400'> Haroon</span> a tech geek. I love new technologies.
-                    Currently I'm exploring the world of the <span className=' text-teal-400'> web developnment</span>.
+                    Hey, I am <span className='text-teal-400'> Haroon</span> a tech geek. I love new technologies.
+                    Currently I am exploring the world of the <span className=' text-teal-400'> web developnment</span>.
                     I like to explore and find new things in the development field everday.
                     {/* I the the hard coded one so */}
                     {/* {pageInfo?.backgroundInformation} */}

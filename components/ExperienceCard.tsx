@@ -42,7 +42,7 @@ const ExperienceCard = ({ experience }: Props) => {
                 <div className='flex space-x-2 my-2'>
                     {/* tech used */}
                     {experience.technologies.map(technology => (
-                        <Image src={urlFor(technology?.image).url()} height={100} width={100} className='relative h-10 w-10 ' alt='icons' />
+                        <Image key={experience._id} src={urlFor(technology?.image).url()} height={100} width={100} className='relative h-10 w-10 object-contain' alt='icons' />
                     ))}
                     {/* <Image src={htmlicon} className='relative h-10 w-10 ' alt='icons' />
                     <Image src={cssicon} className='relative h-10 w-10 ' alt='icons' />

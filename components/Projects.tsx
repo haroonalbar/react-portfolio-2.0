@@ -2,10 +2,13 @@ import { motion } from 'framer-motion'
 import Image from 'next/future/image'
 import React from 'react'
 import netflix from '../public/icons/netflix.png'
-type Props = {}
+import { urlFor } from '../sanity'
+import { Project } from '../typings'
+type Props = {
+    projects: Project[]
+}
 
-const Projects = (props: Props) => {
-    const projects = [1, 2, 3, 4, 5];
+const Projects = ({ projects }: Props) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -17,27 +20,28 @@ const Projects = (props: Props) => {
             <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
             scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-teal-400/80'>
                 {projects.map((project, i) => (
-                    <div className='w-screen flex-shrink-0 snap-center flex flex-col  space-y-5 items-center justify-center p-20 md:p-44 md:mx-auto h-screen '>
+                    <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col  space-y-5 items-center justify-center p-20 md:p-44 md:mx-auto h-screen '>
                         <motion.div
                             initial={{ opacity: 0, y: -100, }}
                             transition={{ duration: 1.2, }}
                             whileInView={{ opacity: 1, y: 0, }}
                             viewport={{ once: true }}
                             className='relative'>
-                            <Image src={netflix} alt='project' className='relative h-24 w-24 md:h-36' />
+                            <Image src={urlFor(project?.image).url()} height={100} width={100} alt='project' className='relative h-40 w-40 object-contain' />
 
                         </motion.div>
 
-                        <div className='space-y-10 p-0 md:px-10 max-w-6xl'>
+                        <div className='space-y-7 p-0 md:px-10 max-w-6xl'>
                             <h4 className=' text-base md:text-2xl font-semibold text-center'>
-                                <span className=' underline decoration-teal-500/50'>Case study of {i + 1} of {projects.length}:</span>  UPS clone
+                                <span className=' underline decoration-teal-500/50'>Case study of {i + 1} of {projects.length}:</span> {project.title}
                             </h4>
-                            <p className=' text-sm md:text-lg text-center md:text-left'>
-                                Netflix is one of the leading video streaming service providers today.
-                                A Netflix clone is a feature-rich software script that allows developers to create
-                                and deploy a video-on-demand platform similar to Netflix.
-                                Despite being aligned with that of Netflix, the framework of a Netflix clone can be optimized
-                                to execute features that the former doesn't have, such as a larger database and an integrated review section.
+                            <div className='flex items-center space-x-3 justify-center'>
+                                {project?.technologies.map(technology => (
+                                    <Image key={project._id} src={urlFor(technology.image).url()} alt='tech' height={100} width={100} className=" h-8 w-8 md:h-10 md:w-10 object-contain" />
+                                ))}
+                            </div>
+                            <p className=' text-sm md:text-lg text-center md:text-left h-20 overflow-y-scroll scrollbar-thin scrollbar-thumb-teal-500/80'>
+                                {project.summary}
                             </p>
                         </div>
                     </div>
