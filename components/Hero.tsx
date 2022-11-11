@@ -30,7 +30,7 @@ export default function Hero({ pageInfo }: Props) {
             {/*z-20 to layer over the backgroundcircles  */}
             <div className='z-20'>
                 <h2 className='text-sm font-light uppercase text-gray-500 pb-2 tracking-[15px]'>
-                    Software Engineer</h2>
+                    {pageInfo?.role}</h2>
                 <h1 className=' text-2xl lg:text-3xl font-semibold px-10'>
                     {/* mr-3 to give space between text and cursor */}
                     <span className='mr-3'>{text}</span>
