@@ -2,10 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/future/image';
 import dp2 from '../public/dp2.jpg';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
     return (
         //h-screen is used for all sections to snap correctly
         <motion.div
@@ -31,7 +35,7 @@ const About = (props: Props) => {
                     duration: 1.2,
                 }}
             >
-                <Image src={dp2} alt='dp image' className=' rounded-xl  relative mt-20 md:mt-0 flex-shrink-0 w-56 h-56 
+                <Image src={urlFor(pageInfo?.profilePic).url()} height={100} width={100} alt='dp image' className=' rounded-xl  relative mt-20 md:mt-0 flex-shrink-0 w-56 h-56 
                  md:w-[600px] md:h-[450px] object-cover' />
             </motion.div>
 
@@ -43,6 +47,8 @@ const About = (props: Props) => {
                     Hey, I'm <span className='text-teal-400'> Haroon</span> a tech geek. I love new technologies.
                     Currently I'm exploring the world of the <span className=' text-teal-400'> web developnment</span>.
                     I like to explore and find new things in the development field everday.
+                    {/* I the the hard coded one so */}
+                    {/* {pageInfo?.backgroundInformation} */}
                 </p>
             </div>
         </motion.div >
