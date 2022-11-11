@@ -4,12 +4,17 @@ import BackgroudCircles from './BackgroudCircles';
 import Image from 'next/future/image';
 import Link from 'next/link';
 import dp from '../public/dp.jpg';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-export default function Hero({ }: Props) {
+export default function Hero({ pageInfo }: Props) {
     const [text] = useTypewriter({
-        words: ["Yo! It's Haroon Albar", 'Guy-who-loves-coffee.tsx', '<ButLovesToCodeMore />',],
+        //?. is used to get if it is there in the backend else reutrn undefined and not an error
+        words: [`Yo! It's ${pageInfo?.name}`, 'Guy-who-loves-coffee.tsx', '<ButLovesToCodeMore />',],
         loop: true,
         //for the animation to stay on
         delaySpeed: 2000,
@@ -20,7 +25,7 @@ export default function Hero({ }: Props) {
             <BackgroudCircles />
 
             {/* rounded full is not working inn the div */}
-            <Image src={dp} alt='dp' className='rounded-full relative h-32 w-32 mx-auto object-cover' />
+            <Image src={urlFor(pageInfo?.heroImage).url()} width={100} height={100} alt='dp' className='rounded-full relative h-32 w-32 mx-auto object-cover' />
 
             {/*z-20 to layer over the backgroundcircles  */}
             <div className='z-20'>
