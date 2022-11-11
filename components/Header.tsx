@@ -27,10 +27,9 @@ export default function Header({ socials }: Props) {
           duration: 1.5,
         }}
         className=' flex flex-row items-center' >
-        <SocialIcon url="https://twitter.com/haroonislive" fgColor='gray' bgColor='transparent' />
-        <SocialIcon url="https://youtube.com/haroonislive" fgColor='gray' bgColor='transparent' />
-        <SocialIcon url="https://github.com/haroonislive" fgColor='gray' bgColor='transparent' />
-        <SocialIcon url="https://linkidin.com/haroonislive" fgColor='gray' bgColor='transparent' />
+        {socials.map((social) => (
+          <SocialIcon key={social._id} url={social.url} fgColor='gray' bgColor='transparent' />
+        ))}
       </motion.div>
       <Link href='#contact'>
         <motion.div
