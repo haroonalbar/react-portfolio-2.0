@@ -8,20 +8,20 @@ interface SanityBody {
 }
 
 interface Image{
-  _type: "image";
+  _type: 'image';
   asset:{
     _ref: string;
-    _type: "reference";
+    _type: 'reference';
   };
 }
 
 export interface PageInfo extends SanityBody{
-  _type: "pageInfo";
+  _type: 'pageInfo';
   address: string;
-  backgroundInformation: string;
+  backgroundInformation : string;
   email: string;
   role: string;
-  heroImage: image;
+  heroImage: Image;
   name: string;
   phoneNumber: string;
   profilePic: Image;
@@ -68,6 +68,5 @@ export interface Project extends SanityBody{
 export interface Social extends SanityBody{
     _type:'social';
     title:string;
-    url:string
-    
+    url:string;
 }
